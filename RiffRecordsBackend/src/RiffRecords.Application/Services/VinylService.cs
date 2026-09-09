@@ -44,9 +44,17 @@ namespace RiffRecords.Application.Services
                     );
         }
 
-        public Task DecreaseStockAsync(int vinylId, int quantity)
+        public async Task DecreaseStockAsync(int vinylId, int quantity)
         {
-            throw new NotImplementedException();
+            var vinyl = await _vinylRepository.GetByIdAsync(vinylId);
+
+            if (vinyl == null)
+                throw new KeyNotFoundException($"Vinyl with id {vinylId} was not found");
+
+            vinyl.DecreaseStock(quantity);
+
+            await _unitOfWork.SaveChangesAsync();
+
         }
 
         public async Task<List<VinylDto>> GetAllAsync()
