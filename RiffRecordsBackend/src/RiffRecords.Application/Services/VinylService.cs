@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using RiffRecords.Application.Abstractions;
-using RiffRecords.Application.Dtos.RiffRecords.Application.Dtos;
+using RiffRecords.Application.Dtos;
 using RiffRecords.Application.Services.Interfaces;
 using RiffRecords.Domain.Entities.Band;
 

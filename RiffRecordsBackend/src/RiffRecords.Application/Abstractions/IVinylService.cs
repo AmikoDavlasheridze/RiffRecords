@@ -1,4 +1,4 @@
-﻿using RiffRecords.Application.Dtos.RiffRecords.Application.Dtos;
+﻿using RiffRecords.Application.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Text;

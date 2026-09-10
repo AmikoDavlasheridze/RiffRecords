@@ -4,8 +4,8 @@ using System.Text;
 
 namespace RiffRecords.Application.Dtos
 {
-    namespace RiffRecords.Application.Dtos
-    {
+    
+    
         // Returned to the client
         public record VinylDto(
             int VinylId,
@@ -27,5 +27,5 @@ namespace RiffRecords.Application.Dtos
             int BandId,
             int InitialStock
         );
-    }
+    
 }
