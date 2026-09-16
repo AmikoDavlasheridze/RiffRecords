@@ -14,8 +14,8 @@ namespace RiffRecords.Application.Services
 
         public WishlistedItemService(IWishlistedItemRepository repository, IUnitOfWork unitOfWork)
         {
-            repository = _repository;
-            unitOfWork = _unitOfWork;
+            _repository = repository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<WishlistedItemDto> AddAnItemAsync(AddWishlistItemDto dto)

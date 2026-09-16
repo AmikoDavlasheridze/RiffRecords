@@ -15,8 +15,8 @@ namespace RiffRecords.Application.Services
 
         public VinylService(IVinylRepository vinylRepository, IUnitOfWork unitOfWork)
         {
-            vinylRepository = _vinylRepository;
-            unitOfWork = _unitOfWork;
+            _vinylRepository = vinylRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<VinylDto> CreateAsync(CreateVinylDto dto)

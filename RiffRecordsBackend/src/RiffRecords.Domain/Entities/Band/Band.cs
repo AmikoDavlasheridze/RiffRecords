@@ -13,9 +13,9 @@ namespace RiffRecords.Domain.Entities.Band
         public string Genre { get; private set; } = string.Empty;
         public string BandPicture { get; private set; } = string.Empty;
 
-        public ICollection<Vinyl> Vinyls { get; set; }
-        public ICollection<Track> Tracks { get; set; }
-        public ICollection<Achievement> Achievements { get; set; }
+        public ICollection<Vinyl> Vinyls { get; set; } = new List<Vinyl>();
+        public ICollection<Track> Tracks { get; set; } = new List<Track>();
+        public ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
         public Bio Bio { get; set; }
 
         public Band(string genre, string bandName, string bandPicture)

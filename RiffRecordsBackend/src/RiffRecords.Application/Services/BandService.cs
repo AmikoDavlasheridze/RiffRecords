@@ -14,8 +14,8 @@ namespace RiffRecords.Application.Services
 
         public BandService(IBandRepository bandRepository, IUnitOfWork unitOfWork)
         {
-            bandRepository = _bandRepository;
-            unitOfWork = _unitOfWork;
+            _bandRepository = bandRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<BandDto> CreateBandAsync(CreateBandDto dto)

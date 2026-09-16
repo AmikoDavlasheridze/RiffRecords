@@ -11,5 +11,7 @@ namespace RiffRecords.Domain.Entities.Band
 
         public int BandId { get; set; }
         public Band Band { get; set; }
+
+    
     }
 }
