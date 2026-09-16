@@ -15,7 +15,7 @@ namespace RiffRecords.Domain.Entities.Band
 
         public int BandId { get; set; }
         public Band Band { get; set; }
-        public ICollection<Track> Tracks { get; set; }
+        public ICollection<Track> Tracks { get; set; } = new List<Track>();
 
         public void DecreaseStock(int quantity)
         {
@@ -34,15 +34,15 @@ namespace RiffRecords.Domain.Entities.Band
             Stock += quantity;
         }
 
-        public Vinyl(string albumTitle, decimal price, int releaseYear, string image, int bandId, int initialStock)
+        public Vinyl(string albumTitle, decimal price, int releaseYear, string image, int bandId, int Stock)
         {
-            if (initialStock < 0)
+            if (Stock < 0)
                 throw new ArgumentException("Quantity must be positive");
 
             if (price < 0)
                 throw new ArgumentException("Price must be positive.");
 
-            Stock = initialStock;
+            this.Stock = Stock;
             ReleaseYear = releaseYear;
             Image = image;
             BandId = bandId;
