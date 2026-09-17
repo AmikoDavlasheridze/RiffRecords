@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RiffRecords.Application.Services.Interfaces
+namespace RiffRecords.Application.Abstractions.serviceAbstractions
 {
-    internal interface IVinylService
+    public interface IVinylService
     {
         Task<VinylDto?> GetByIdAsync(int id);
         Task<List<VinylDto>> GetAllAsync();

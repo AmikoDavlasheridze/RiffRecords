@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using RiffRecords.Application.Abstractions;
 using RiffRecords.Application.Dtos;
-using RiffRecords.Application.Services.Interfaces;
+using RiffRecords.Application.Abstractions.serviceAbstractions;
 using RiffRecords.Domain.Entities.Band;
 
 namespace RiffRecords.Application.Services

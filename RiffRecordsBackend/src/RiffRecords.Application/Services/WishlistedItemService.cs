@@ -1,4 +1,5 @@
 ﻿using RiffRecords.Application.Abstractions;
+using RiffRecords.Application.Abstractions.serviceAbstractions;
 using RiffRecords.Application.Dtos;
 using RiffRecords.Domain.Entities.User;
 using System;

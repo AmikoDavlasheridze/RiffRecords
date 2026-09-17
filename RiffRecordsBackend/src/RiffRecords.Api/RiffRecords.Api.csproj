@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RiffRecords.Infrastructure\RiffRecords.Infrastructure.csproj" />
+    <ProjectReference Include="..\RiffRecords.Application\RiffRecords.Application.csproj" />
   </ItemGroup>
 
 </Project>

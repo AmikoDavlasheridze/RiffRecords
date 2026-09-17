@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RiffRecords.Application.Services
+namespace RiffRecords.Application.Abstractions.serviceAbstractions
 {
     public interface IBandService
     {

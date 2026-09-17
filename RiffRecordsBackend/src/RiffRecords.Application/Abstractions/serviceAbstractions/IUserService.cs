@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RiffRecords.Application.Abstractions
+namespace RiffRecords.Application.Abstractions.serviceAbstractions
 {
     public interface IUserService
     {

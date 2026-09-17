@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RiffRecords.Infrastructure;
+using RiffRecords.Application;
 using RiffRecords.Infrastructure.Persistence;
 
 
@@ -10,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplication();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -20,6 +23,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 
 
 
