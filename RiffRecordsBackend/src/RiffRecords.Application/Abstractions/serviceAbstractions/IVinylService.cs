@@ -11,5 +11,6 @@ namespace RiffRecords.Application.Abstractions.serviceAbstractions
         Task<List<VinylDto>> GetAllAsync();
         Task<VinylDto> CreateAsync(CreateVinylDto dto);
         Task DecreaseStockAsync(int vinylId, int quantity);
+        Task IncreaseStockAsync(int vinylId, int quantity);
     }
 }

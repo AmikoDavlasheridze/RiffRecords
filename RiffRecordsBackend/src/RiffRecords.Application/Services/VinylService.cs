@@ -71,7 +71,7 @@ namespace RiffRecords.Application.Services
                 v.BandId,
                 v.Band.BandName
             )).ToList();
-
+            
             
         }
 
@@ -93,6 +93,18 @@ namespace RiffRecords.Application.Services
                 vinyl.Band.BandName
                 );
                 
+        }
+
+        public async Task IncreaseStockAsync(int vinylId, int quantity)
+        {
+            var vinyl = await _vinylRepository.GetByIdAsync(vinylId);
+
+            if (vinyl == null)
+                throw new KeyNotFoundException($"Vinyl with id {vinylId} was not found");
+
+            vinyl.IncreaseStock(quantity);
+
+            await _unitOfWork.SaveChangesAsync();
         }
     }
 }

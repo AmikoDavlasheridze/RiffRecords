@@ -16,13 +16,13 @@ namespace RiffRecords.Api.Controllers
             _vinylService = vinylService;
         }
 
-        
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var vinyl = await _vinylService.GetByIdAsync(id);
 
-            if (vinyl == null) 
+            if (vinyl == null)
                 return NotFound();
 
             return Ok(vinyl);
@@ -42,5 +42,22 @@ namespace RiffRecords.Api.Controllers
             return CreatedAtAction(nameof(GetById), new { id = vinyl.VinylId }, vinyl);
         }
 
+        [HttpPost("{id}/increase-stock")]
+        public async Task<IActionResult> IncreaseStock(int id, [FromQuery] int quantity)
+        {
+            try
+            {
+                await _vinylService.IncreaseStockAsync(id, quantity);
+                return NoContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

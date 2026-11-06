@@ -23,7 +23,7 @@ namespace RiffRecords.Api.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetByIdAsync(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             var band = await _bandService.GetBandByIdAsync(id);
             if (band == null)
@@ -39,7 +39,7 @@ namespace RiffRecords.Api.Controllers
             var band = await _bandService.CreateBandAsync(dto);
 
             return CreatedAtAction(
-                nameof(GetByIdAsync),
+                nameof(GetById),
                 new { id = band.BandId },
                 band);
         }
