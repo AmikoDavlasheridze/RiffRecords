@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using RiffRecords.Application.Abstractions.serviceAbstractions;
 using RiffRecords.Application.Dtos;
 
@@ -37,6 +38,16 @@ namespace RiffRecords.Api.Controllers
                 user);
         }
 
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginUserDto dto)
+        {
+            var user = await _userService.LoginUserAsync(dto);
+            if (user == null)
+            {
+                return Unauthorized("password or username is incorrect");
+            }
+            return Ok(user);
+        }
 
     }
 }
