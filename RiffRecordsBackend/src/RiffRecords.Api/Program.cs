@@ -1,9 +1,50 @@
 using Microsoft.OpenApi;
 using RiffRecords.Application;
 using RiffRecords.Infrastructure;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using RiffRecords.Api.Security;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
+var signingKeyBase64 = builder.Configuration["Jwt:SigningKey"]
+    ?? throw new InvalidOperationException("Signing key is not configured.");
+
+var signingKey = new SymmetricSecurityKey(
+    Convert.FromBase64String(signingKeyBase64));
+
+var jwtIssuer = builder.Configuration["Jwt:Issuer"]
+    ?? throw new InvalidOperationException("Jwt:Issuer is missing.");
+
+var jwtAudience = builder.Configuration["Jwt:Audience"]
+    ?? throw new InvalidOperationException("Jwt:Audience is missing.");
+
+builder.Services.AddSingleton(new JwtTokenService(
+    new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256),
+    jwtIssuer,
+    jwtAudience));
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.MapInboundClaims = false;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            IssuerSigningKey = signingKey,
+            ValidAlgorithms = [SecurityAlgorithms.HmacSha256],
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtIssuer,
+            ValidateAudience = true,
+            ValidAudience = jwtAudience,
+            ValidateLifetime = true,
+            RoleClaimType = "role",
+        };
+    });
+
+builder.Services.AddAuthorization();
 
 builder.Services.AddControllers();
 builder.Services.AddApplication();
@@ -35,5 +76,8 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/openapi/v1.json", "RiffRecords API"));
 }
 
+
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 app.Run();

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using RiffRecords.Api.Security;
 using RiffRecords.Application.Abstractions.serviceAbstractions;
 using RiffRecords.Application.Dtos;
 
@@ -10,10 +11,12 @@ namespace RiffRecords.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly JwtTokenService jwtTokenService;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, JwtTokenService jwtTokenService)
         {
             _userService = userService;
+            this.jwtTokenService = jwtTokenService;
         }
 
         [HttpGet("{id:int}")]
@@ -46,7 +49,16 @@ namespace RiffRecords.Api.Controllers
             {
                 return Unauthorized("password or username is incorrect");
             }
-            return Ok(user);
+            var accessToken = jwtTokenService.CreateToken(user);
+
+            return Ok(new
+            {
+                user.Id,
+                user.Email,
+                user.Username,
+                user.Role,
+                accessToken
+            });
         }
 
     }
