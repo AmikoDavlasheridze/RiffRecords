@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RiffRecords.Application.Dtos;
 using RiffRecords.Application.Abstractions.serviceAbstractions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RiffRecords.Api.Controllers
 {
@@ -33,6 +34,7 @@ namespace RiffRecords.Api.Controllers
             return Ok(band);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateAsync([FromBody] CreateBandDto dto)
         {
@@ -44,6 +46,7 @@ namespace RiffRecords.Api.Controllers
                 band);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateBandAsync(int id, [FromBody] CreateBandDto dto)
         {
@@ -58,6 +61,7 @@ namespace RiffRecords.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteBandAsync(int id)
         {
