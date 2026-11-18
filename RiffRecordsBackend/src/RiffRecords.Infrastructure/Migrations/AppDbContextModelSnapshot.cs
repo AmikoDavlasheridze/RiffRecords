@@ -114,9 +114,6 @@ namespace RiffRecords.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("BandId")
-                        .HasColumnType("int");
-
                     b.Property<string>("TrackName")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -129,8 +126,6 @@ namespace RiffRecords.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BandId");
 
                     b.HasIndex("VinylId");
 
@@ -257,10 +252,6 @@ namespace RiffRecords.Infrastructure.Migrations
 
             modelBuilder.Entity("RiffRecords.Domain.Entities.Band.Track", b =>
                 {
-                    b.HasOne("RiffRecords.Domain.Entities.Band.Band", null)
-                        .WithMany("Tracks")
-                        .HasForeignKey("BandId");
-
                     b.HasOne("RiffRecords.Domain.Entities.Band.Vinyl", "Vinyl")
                         .WithMany("Tracks")
                         .HasForeignKey("VinylId")
@@ -306,8 +297,6 @@ namespace RiffRecords.Infrastructure.Migrations
 
                     b.Navigation("Bio")
                         .IsRequired();
-
-                    b.Navigation("Tracks");
 
                     b.Navigation("Vinyls");
                 });
