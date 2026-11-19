@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RiffRecords.Application.Abstractions.serviceAbstractions;
 using RiffRecords.Application.Dtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RiffRecords.Api.Controllers
 {
@@ -42,6 +43,7 @@ namespace RiffRecords.Api.Controllers
             return CreatedAtAction(nameof(GetById), new { id = vinyl.VinylId }, vinyl);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("{id}/increase-stock")]
         public async Task<IActionResult> IncreaseStock(int id, [FromQuery] int quantity)
         {

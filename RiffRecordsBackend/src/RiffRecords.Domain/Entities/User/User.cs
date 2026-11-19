@@ -11,7 +11,7 @@ namespace RiffRecords.Domain.Entities.User
         public string Email { get; set; } = string.Empty;
         public string PasswordHash { get; set; } = string.Empty;
         public string Username { get; private set; } = string.Empty;
-        public UserRole Role { get; set; } = UserRole.User;
+        public UserRole Role { get; private set; } = UserRole.User;
 
         public User(string email, string username, string passwordHash)
         {
@@ -27,6 +27,11 @@ namespace RiffRecords.Domain.Entities.User
             Email = email;
             Username = username;
             PasswordHash = passwordHash;
+        }
+
+        public void PromoteToAdmin()
+        {
+            Role = UserRole.Admin;
         }
     }
 }
