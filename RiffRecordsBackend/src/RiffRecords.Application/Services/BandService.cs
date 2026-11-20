@@ -26,16 +26,22 @@ namespace RiffRecords.Application.Services
                 dto.BandName,
                 dto.BandPicture
                 );
+            
+            if (await _bandRepository.SlugExistsAsync(band.Slug))          
+                throw new InvalidOperationException($"A band named '{dto.BandName}' already exists.");
+
 
             await _bandRepository.AddAsync(band);
             await _unitOfWork.SaveChangesAsync();
-
+            
             return new BandDto(
                 band.BandId,
                 band.BandName,
                 band.BandPicture,
                 band.Genre,
                 band.Slug);
+
+            
         }
 
         public async Task DeleteAsync(int bandId)
@@ -90,7 +96,12 @@ namespace RiffRecords.Application.Services
 
             band.UpdateDetails(dto.BandName, dto.Genre, dto.BandPicture);
 
+            if (await _bandRepository.SlugExistsAsync(band.Slug, bandId))  
+                throw new InvalidOperationException($"A band named '{dto.BandName}' already exists.");
+
             await _unitOfWork.SaveChangesAsync();
+
+            
         }
     }
 }

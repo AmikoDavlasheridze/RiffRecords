@@ -40,6 +40,10 @@ namespace RiffRecords.Infrastructure.Repositories
                 .FirstOrDefaultAsync(b => b.BandId == id);
         }
 
+        public Task<bool> SlugExistsAsync(string slug, int? excludeBandId = null) =>
+            _context.Bands.AnyAsync(b => b.Slug == slug && b.BandId != excludeBandId);
+        
+
         public void Update(Band band)
         {
             _context.Bands.Update(band);

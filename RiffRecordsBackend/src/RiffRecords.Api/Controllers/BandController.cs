@@ -38,12 +38,17 @@ namespace RiffRecords.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateAsync([FromBody] CreateBandDto dto)
         {
-            var band = await _bandService.CreateBandAsync(dto);
+            try
+            {
+                var band = await _bandService.CreateBandAsync(dto);
+                return CreatedAtAction(nameof(GetById), new { id = band.BandId }, band);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message);
+            }
 
-            return CreatedAtAction(
-                nameof(GetById),
-                new { id = band.BandId },
-                band);
+
         }
 
         [Authorize(Roles = "Admin")]
@@ -55,9 +60,13 @@ namespace RiffRecords.Api.Controllers
                 await _bandService.UpdateAsync(id, dto);
                 return NoContent();
             }
-            catch(KeyNotFoundException)
+            catch (KeyNotFoundException)
             {
                 return NotFound();
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message);
             }
         }
 
