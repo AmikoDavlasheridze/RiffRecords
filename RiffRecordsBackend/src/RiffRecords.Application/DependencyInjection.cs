@@ -13,6 +13,7 @@ namespace RiffRecords.Application
             services.AddScoped<IBandService, BandService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IWishlistedItemService, WishlistedItemService>();
+            services.AddScoped<AdminSeeder>();
 
             return services;
         }

@@ -1,6 +1,46 @@
-@RiffRecords.Api_HostAddress = http://localhost:5298
+@host = http://localhost:5298
+@adminEmail = a.davlasheridze111@gmail.com
+@adminPassword = admin
 
-GET {{RiffRecords.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+### 1. Public read, expect 200
+GET {{host}}/api/band
 
-###
+### 2. Admin endpoint without a token, expect 401
+POST {{host}}/api/band
+Content-Type: application/json
+
+{ "genre": "Metal", "bandName": "Test Band", "bandPicture": "x.jpg" }
+
+### 3. Register a normal user, expect 201 (409 once duplicates are handled; 500 for now if you rerun it)
+POST {{host}}/api/user/register
+Content-Type: application/json
+
+{ "email": "user@test.com", "username": "tester", "password": "Test123!" }
+
+### 4. Log in as the normal user
+# @name userLogin
+POST {{host}}/api/user/login
+Content-Type: application/json
+
+{ "email": "user@test.com", "password": "Test123!" }
+
+### 5. Admin endpoint with a User token, expect 403
+POST {{host}}/api/band
+Authorization: Bearer {{userLogin.response.body.$.accessToken}}
+Content-Type: application/json
+
+{ "genre": "Metal", "bandName": "Test Band", "bandPicture": "x.jpg" }
+
+### 6. Log in as the seeded admin, check "role": "Admin" in the response
+# @name adminLogin
+POST {{host}}/api/user/login
+Content-Type: application/json
+
+{ "email": "{{adminEmail}}", "password": "{{adminPassword}}" }
+
+### 7. Admin endpoint with an Admin token, expect 201
+POST {{host}}/api/band
+Authorization: Bearer {{adminLogin.response.body.$.accessToken}}
+Content-Type: application/json
+
+{ "genre": "Metal", "bandName": "Test Band", "bandPicture": "x.jpg" }

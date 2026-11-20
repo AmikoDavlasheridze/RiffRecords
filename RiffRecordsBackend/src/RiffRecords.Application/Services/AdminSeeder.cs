@@ -1,5 +1,8 @@
 ﻿using RiffRecords.Application.Options;
 using RiffRecords.Application.Abstractions;
+using RiffRecords.Domain.Entities;
+using RiffRecords.Domain.Entities.User;
+using RiffRecords.Domain.Enum;
 
 
 namespace RiffRecords.Application.Services
@@ -18,6 +21,20 @@ namespace RiffRecords.Application.Services
         }
 
         public async Task SeedAsync (
-            AdminSeeder)
+            AdminSeedOptions options, CancellationToken ct = default)
+        {
+            var user = await _userRepository.GetByEmailAsync(options.Email);
+
+            if (user is null)
+            {
+                user = new User(options.Email, options.Username, _passwordHash.Hash(options.Password));
+                await _userRepository.AddAsync(user);
+            }
+
+            if (user.Role != UserRole.Admin)
+                user.PromoteToAdmin();
+
+            await _unitOfWork.SaveChangesAsync();
+        }
     }
 }
