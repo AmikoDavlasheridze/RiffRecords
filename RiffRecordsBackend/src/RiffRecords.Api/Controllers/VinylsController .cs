@@ -36,6 +36,7 @@ namespace RiffRecords.Api.Controllers
             return Ok(vinyls);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateVinylDto dto)
         {

@@ -1,6 +1,5 @@
 @host = http://localhost:5298
-@adminEmail = a.davlasheridze111@gmail.com
-@adminPassword = admin
+
 
 ### 1. Public read, expect 200
 GET {{host}}/api/band
