@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using RiffRecords.Api.Security;
 using RiffRecords.Application.Abstractions.serviceAbstractions;
@@ -35,11 +34,15 @@ namespace RiffRecords.Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterUserDto dto)
         {
-            var user = await _userService.CreateNewUserAsync(dto);
-
-            return CreatedAtAction(
-                nameof(Me),
-                user);
+            try
+            {
+                var user = await _userService.CreateNewUserAsync(dto);
+                return CreatedAtAction(nameof(Me), user);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message);
+            }
         }
 
         [HttpPost("login")]
@@ -48,7 +51,7 @@ namespace RiffRecords.Api.Controllers
             var user = await _userService.LoginUserAsync(dto);
             if (user == null)
             {
-                return Unauthorized("password or username is incorrect");
+                return Unauthorized("password or email is incorrect");
             }
             var accessToken = _jwtTokenService.CreateToken(user);
 
