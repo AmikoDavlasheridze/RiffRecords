@@ -8,7 +8,7 @@ namespace RiffRecords.Application.Abstractions.serviceAbstractions
     public interface IWishlistedItemService
     {
         Task<List<WishlistedItemDto>> GetAllItemsAsync(int userId);
-        Task<WishlistedItemDto> AddAnItemAsync (AddWishlistItemDto dto);
-        Task RemoveItemAsync(int wishelistedItemId);
+        Task<WishlistedItemDto> AddAnItemAsync (int userId, AddWishlistItemDto dto);
+        Task RemoveItemAsync(int userId, int wishelistedItemId);
     }
 }

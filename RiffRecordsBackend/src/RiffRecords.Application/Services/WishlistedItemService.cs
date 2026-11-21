@@ -2,9 +2,6 @@
 using RiffRecords.Application.Abstractions.serviceAbstractions;
 using RiffRecords.Application.Dtos;
 using RiffRecords.Domain.Entities.User;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RiffRecords.Application.Services
 {
@@ -12,25 +9,24 @@ namespace RiffRecords.Application.Services
     {
         private readonly IWishlistedItemRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IVinylRepository _vinylRepository;
 
-        public WishlistedItemService(IWishlistedItemRepository repository, IUnitOfWork unitOfWork)
+        public WishlistedItemService(IWishlistedItemRepository repository, IUnitOfWork unitOfWork, IVinylRepository vinylRepository)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
+            _vinylRepository = vinylRepository;
         }
 
-        public async Task<WishlistedItemDto> AddAnItemAsync(AddWishlistItemDto dto)
+        public async Task<WishlistedItemDto> AddAnItemAsync(int userId, AddWishlistItemDto dto)
         {
-            var existing = await _repository.GetByUserAndVinylAsync(dto.UserId, dto.VinylId);
-            if (existing != null)
-                throw new InvalidOperationException("This Vinyl Is Already In The Wishlist");
+            if (await _vinylRepository.GetByIdAsync(dto.VinylId) == null)
+                throw new KeyNotFoundException($"Vinyl {dto.VinylId} was not found");
 
+            if (await _repository.GetByUserAndVinylAsync(userId, dto.VinylId) != null)
+                throw new InvalidOperationException("This vinyl is already in the wishlist");
 
-            var item = new WishlistedItem
-            {
-                UserId = dto.UserId,
-                VinylId = dto.VinylId,
-            };
+            var item = new WishlistedItem { UserId = userId, VinylId = dto.VinylId };
 
             await _repository.AddAsync(item);
             await _unitOfWork.SaveChangesAsync();
@@ -48,18 +44,16 @@ namespace RiffRecords.Application.Services
                 w.VinylId)).ToList();
         }
 
-        public async Task RemoveItemAsync(int wishelistedItemId)
+        public async Task RemoveItemAsync(int userId, int wishlistedItemId)
         {
-            var item = await _repository.GetWishlistByIdAsync(wishelistedItemId);
+            var item = await _repository.GetWishlistByIdAsync(wishlistedItemId);
 
-            if (item == null)
-                throw new KeyNotFoundException($"Wishlisted Item With the Id of {wishelistedItemId} was not found");
+            if (item == null || item.UserId != userId)
+                throw new KeyNotFoundException($"Wishlisted item {wishlistedItemId} was not found");
 
             _repository.Remove(item);
-
             await _unitOfWork.SaveChangesAsync();
         }
-
-        
     }
+
 }

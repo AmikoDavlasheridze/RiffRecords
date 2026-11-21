@@ -10,7 +10,7 @@ Content-Type: application/json
 
 { "genre": "Metal", "bandName": "Test Band", "bandPicture": "x.jpg" }
 
-### 3. Register a normal user, expect 201 (409 once duplicates are handled; 500 for now if you rerun it)
+### 3. Register a normal user, exp              ect 201 (409 once duplicates are handled; 500 for now if you rerun it)
 POST {{host}}/api/user/register
 Content-Type: application/json
 
@@ -42,4 +42,46 @@ POST {{host}}/api/band
 Authorization: Bearer {{adminLogin.response.body.$.accessToken}}
 Content-Type: application/json
 
-{ "genre": "Metal", "bandName": "Test Band_1", "bandPicture": "x.jpg" }
+{ "genre": "Metal", "bandName": "Test Band_2", "bandPicture": "x.jpg" }
+
+### 8. Me with admin token, expect 200 with your admin data
+GET {{host}}/api/user/me
+Authorization: Bearer {{adminLogin.response.body.$.accessToken}}
+
+### 9. Me without token, expect 401
+GET {{host}}/api/user/me
+
+### 9b. Create a vinyl as admin, expect 201
+# @name createVinyl
+POST {{host}}/api/vinyls
+Authorization: Bearer {{adminLogin.response.body.$.accessToken}}
+Content-Type: application/json
+
+{ "albumTitle": "Test Album", "price": 49.99, "releaseYear": 1990, "image": "x.jpg", "bandId": 1, "initialStock": 5 }
+
+### 10. Add to wishlist as user, expect 201 (409 on rerun)
+# @name addWish
+POST {{host}}/api/wishlist
+Authorization: Bearer {{userLogin.response.body.$.accessToken}}
+Content-Type: application/json
+
+{ "vinylId": 1 }
+
+### 11. My wishlist as user, expect the item
+GET {{host}}/api/wishlist
+Authorization: Bearer {{userLogin.response.body.$.accessToken}}
+
+### 12. Admin tries to delete the user's item, expect 404
+DELETE {{host}}/api/wishlist/{{addWish.response.body.$.id}}
+Authorization: Bearer {{adminLogin.response.body.$.accessToken}}
+
+### 13. User deletes own item, expect 204
+DELETE {{host}}/api/wishlist/{{addWish.response.body.$.id}}
+Authorization: Bearer {{userLogin.response.body.$.accessToken}}
+
+### 14. Unknown vinyl, expect 404
+POST {{host}}/api/wishlist
+Authorization: Bearer {{userLogin.response.body.$.accessToken}}
+Content-Type: application/json
+
+{ "vinylId": 99999 }
