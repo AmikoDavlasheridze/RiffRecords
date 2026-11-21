@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using RiffRecords.Api.Security;
 using RiffRecords.Application.Abstractions.serviceAbstractions;
@@ -11,18 +12,19 @@ namespace RiffRecords.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly JwtTokenService jwtTokenService;
+        private readonly JwtTokenService _jwtTokenService;
 
         public UserController(IUserService userService, JwtTokenService jwtTokenService)
         {
             _userService = userService;
-            this.jwtTokenService = jwtTokenService;
+            this._jwtTokenService = jwtTokenService;
         }
 
-        [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetUserById(int id)
+        [Authorize]
+        [HttpGet("me")]
+        public async Task<IActionResult> Me()
         {
-            var user = await _userService.GetUserByIdAsync(id);
+            var user = await _userService.GetUserByIdAsync(User.GetUserId());
             if (user == null)
             {
                 return NotFound();
@@ -36,8 +38,7 @@ namespace RiffRecords.Api.Controllers
             var user = await _userService.CreateNewUserAsync(dto);
 
             return CreatedAtAction(
-                nameof(GetUserById),
-                new { id = user.Id},
+                nameof(Me),
                 user);
         }
 
@@ -49,7 +50,7 @@ namespace RiffRecords.Api.Controllers
             {
                 return Unauthorized("password or username is incorrect");
             }
-            var accessToken = jwtTokenService.CreateToken(user);
+            var accessToken = _jwtTokenService.CreateToken(user);
 
             return Ok(new
             {

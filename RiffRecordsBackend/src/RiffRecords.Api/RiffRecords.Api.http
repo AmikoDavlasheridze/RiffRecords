@@ -42,4 +42,4 @@ POST {{host}}/api/band
 Authorization: Bearer {{adminLogin.response.body.$.accessToken}}
 Content-Type: application/json
 
-{ "genre": "Metal", "bandName": "Test Band", "bandPicture": "x.jpg" }
+{ "genre": "Metal", "bandName": "Test Band_1", "bandPicture": "x.jpg" }
