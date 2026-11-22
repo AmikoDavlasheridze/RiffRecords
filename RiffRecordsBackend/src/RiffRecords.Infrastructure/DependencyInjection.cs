@@ -5,10 +5,7 @@ using RiffRecords.Application.Abstractions;
 using RiffRecords.Infrastructure.Persistence;
 using RiffRecords.Infrastructure.Repositories;
 using RiffRecords.Infrastructure.Security;
-using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Text;
+
 
 namespace RiffRecords.Infrastructure
 {
@@ -17,7 +14,12 @@ namespace RiffRecords.Infrastructure
         public static IServiceCollection AddInfrastructure(this  IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(
+                     configuration.GetConnectionString("DefaultConnection"),
+                     sql => sql.EnableRetryOnFailure(
+                     maxRetryCount: 10,
+                     maxRetryDelay: TimeSpan.FromSeconds(10),
+                     errorNumbersToAdd: null)));
 
 
             services.AddScoped<IVinylRepository, VinylRepository>();

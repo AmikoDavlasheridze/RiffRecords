@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using RiffRecords.Api.Security;
 using RiffRecords.Application.Options;
 using RiffRecords.Application.Services;
+using RiffRecords.Infrastructure.Persistence;
 
 
 
@@ -70,6 +71,9 @@ builder.Services.AddOpenApi(options =>
 });
 
 var app = builder.Build();
+
+if (app.Configuration.GetValue<bool>("Database:MigrateOnStartup"))
+    await app.Services.MigrateDatabaseAsync();
 
 var seed = app.Configuration.GetSection(AdminSeedOptions.SectionName).Get<AdminSeedOptions>();
 if(string.IsNullOrWhiteSpace(seed?.Email) || string.IsNullOrWhiteSpace(seed?.Password))
