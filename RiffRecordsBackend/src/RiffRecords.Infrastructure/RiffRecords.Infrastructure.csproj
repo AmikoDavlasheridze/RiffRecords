@@ -20,4 +20,8 @@
     <ProjectReference Include="..\RiffRecords.Application\RiffRecords.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="Persistence\Seed\catalog.json" />
+  </ItemGroup>
+
 </Project>

@@ -3,21 +3,30 @@ async function loadShop() {
   if (!grid) return;
 
   try {
-    const res = await fetch("https://raw.githubusercontent.com/AmikoDavlasheridze/Finals-data/refs/heads/main/data.json");
-    const data = await res.json();
+    const [bandsRes, vinylsRes] = await Promise.all([
+      fetch(`${API_BASE_URL}/api/band`),
+      fetch(`${API_BASE_URL}/api/vinyls`)
+    ]);
+    if (!bandsRes.ok || !vinylsRes.ok) {
+      throw new Error(`API error: bands ${bandsRes.status}, vinyls ${vinylsRes.status}`);
+    }
+    const bands = await bandsRes.json();
+    const vinyls = await vinylsRes.json();
 
-    data.bands.forEach((band) => {
+    bands.forEach((band) => {
+      const bandVinyls = vinyls.filter((v) => v.bandId === band.bandId);
+
       const card = document.createElement("div");
       card.className = "band-card";
 
       const link = document.createElement("a");
-      link.href = `band-details.html?id=${band.id}`;
+      link.href = `band-details.html?id=${band.bandId}`;
 
       const media = document.createElement("div");
       media.className = "card-media";
 
       const img = document.createElement("img");
-      img.src = band.bandImage;
+      img.src = band.bandPicture;
       img.alt = band.bandName;
       media.appendChild(img);
 
@@ -32,13 +41,15 @@ async function loadShop() {
 
       const h3 = document.createElement("h3");
       const h3Link = document.createElement("a");
-      h3Link.href = `band-details.html?id=${band.id}`;
+      h3Link.href = `band-details.html?id=${band.bandId}`;
       h3Link.textContent = band.bandName;
       h3.appendChild(h3Link);
 
       const price = document.createElement("span");
       price.className = "price";
-      price.textContent = `From $${Math.min(...band.vinyls.map(v => v.price)).toFixed(2)}`;
+      price.textContent = bandVinyls.length
+        ? `From $${Math.min(...bandVinyls.map((v) => v.price)).toFixed(2)}`
+        : "Coming soon";
 
       body.appendChild(eyebrow);
       body.appendChild(h3);
@@ -49,13 +60,13 @@ async function loadShop() {
 
       const viewBtn = document.createElement("a");
       viewBtn.className = "btn btn-outline";
-      viewBtn.href = `band-details.html?id=${band.id}`;
+      viewBtn.href = `band-details.html?id=${band.bandId}`;
       viewBtn.style.flex = "1";
       viewBtn.textContent = "View Vinyls";
 
       const bioBtn = document.createElement("a");
       bioBtn.className = "btn btn-primary";
-      bioBtn.href = `band-bio.html?id=${band.id}`;
+      bioBtn.href = `band-bio.html?id=${band.bandId}`;
       bioBtn.textContent = "Learn More";
 
       actions.appendChild(viewBtn);
@@ -69,7 +80,7 @@ async function loadShop() {
   } catch (err) {
     const errorMsg = document.createElement("p");
     errorMsg.className = "stock-out";
-    errorMsg.textContent = "Couldn't load the catalog. Check that data.json is reachable.";
+    errorMsg.textContent = "Couldn't load the catalog. Is the API running?";
     grid.appendChild(errorMsg);
     console.error(err);
   }

@@ -7,6 +7,7 @@ using RiffRecords.Api.Security;
 using RiffRecords.Application.Options;
 using RiffRecords.Application.Services;
 using RiffRecords.Infrastructure.Persistence;
+using RiffRecords.Infrastructure.Persistence.Seed;
 
 
 
@@ -70,10 +71,23 @@ builder.Services.AddOpenApi(options =>
     });
 });
 
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? [];
+
+builder.Services.AddCors(options =>
+    options.AddPolicy("Frontend", policy => policy
+        .WithOrigins(allowedOrigins)
+        .AllowAnyHeader()
+        .AllowAnyMethod()));
+
 var app = builder.Build();
+
+app.UseCors("Frontend");
 
 if (app.Configuration.GetValue<bool>("Database:MigrateOnStartup"))
     await app.Services.MigrateDatabaseAsync();
+
+if (app.Configuration.GetValue<bool>("Database:SeedCatalog"))
+    await app.Services.SeedCatalogAsync();
 
 var seed = app.Configuration.GetSection(AdminSeedOptions.SectionName).Get<AdminSeedOptions>();
 if(string.IsNullOrWhiteSpace(seed?.Email) || string.IsNullOrWhiteSpace(seed?.Password))

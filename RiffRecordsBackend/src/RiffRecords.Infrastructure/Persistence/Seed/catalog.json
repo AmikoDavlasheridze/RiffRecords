@@ -1,0 +1,292 @@
+{
+  "bands": [
+    {
+      "id": "deftones",
+      "bandName": "Deftones",
+      "genre": "Alternative Metal",
+      "bandImage": "https://amityvilleecho.com/wp-content/uploads/2022/12/deftones_1997_ml_03_copy.jpg",
+      "bio": "Formed in Sacramento in 1988, Deftones fused the aggression of metal with dreamy, shoegaze-influenced atmospherics, becoming one of the most sonically distinct bands in the alternative metal scene.",
+      "history": "Formed in Sacramento in 1988, Deftones revolutionized alternative metal by fusing heavy riffs with dreamy, shoegaze-influenced atmospherics. Over three decades, they've evolved from a regional nu-metal act into one of the most respected and influential bands in heavy music, known for their meticulous production and emotional depth.",
+      "famousTracks": [
+        "Change (In the House of Flies) — 2003",
+        "Minerva — 2000",
+        "Digital Bath — 2003",
+        "Hexagram — 2006",
+        "Passenger — 2012"
+      ],
+      "achievements": [
+        "Helped pioneer the 'alternative metal' subgenre",
+        "Platinum certifications for White Pony and Diamond Eyes",
+        "Multiple Grammy nominations",
+        "Toured globally for 30+ years",
+        "Influenced countless metal and alternative bands"
+      ],
+      "vinyls": [
+        {
+          "productId": "dft-001",
+          "albumTitle": "White Pony",
+          "price": 34.99,
+          "releaseYear": 2000,
+          "image": "https://i.scdn.co/image/ab67616d00001e025c53799f473fa3e1a48c00ed",
+          "stock": 12
+        },
+        {
+          "productId": "dft-002",
+          "albumTitle": "Around the Fur",
+          "price": 29.99,
+          "releaseYear": 1997,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_CbMafiSDw9cpV8fRFU0Tzzi2KIi3gtkUQwAybSPeA&s",
+          "stock": 8
+        },
+        {
+          "productId": "dft-003",
+          "albumTitle": "Diamond Eyes",
+          "price": 27.5,
+          "releaseYear": 2010,
+          "image": "https://upload.wikimedia.org/wikipedia/en/8/8b/Deftones_-_Diamond_Eyes.jpg",
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "system-of-a-down",
+      "bandName": "System of a Down",
+      "genre": "Alternative Metal / Nu Metal",
+      "bandImage": "https://live-production.wcms.abc-cdn.net.au/69d8f0a8c660b07b9932c77319dbf27e?impolicy=wcms_crop_resize&cropH=1125&cropW=2000&xPos=0&yPos=0&width=862&height=485",
+      "bio": "Formed in Glendale, California in 1994, System of a Down blended thrash riffs, Armenian folk influences, and politically charged, often satirical lyrics into a wholly unique sound.",
+      "history": "Formed in Glendale, California in 1994, System of a Down blended thrash metal riffs, Armenian folk influences, and politically charged, often satirical lyrics into a wholly unique sound. The band became one of the most commercially successful and critically acclaimed metal bands of the 2000s, known for their activism and social commentary.",
+      "famousTracks": [
+        "Toxicity — 2001",
+        "Sugar — 2005",
+        "Hypnotize — 2005",
+        "Chop Suey! — 2001",
+        "B.Y.O.B. — 2005"
+      ],
+      "achievements": [
+        "Multi-platinum albums in numerous countries",
+        "One of the most-streamed metal bands globally",
+        "Vocal advocates for Armenian recognition",
+        "Pioneered Armenian-metal fusion",
+        "Sold over 40 million records worldwide"
+      ],
+      "vinyls": [
+        {
+          "productId": "soad-001",
+          "albumTitle": "Toxicity",
+          "price": 32.0,
+          "releaseYear": 2001,
+          "image": "https://upload.wikimedia.org/wikipedia/en/6/64/SystemofaDownToxicityalbumcover.jpg",
+          "stock": 15
+        },
+        {
+          "productId": "soad-002",
+          "albumTitle": "System of a Down",
+          "price": 28.0,
+          "releaseYear": 1998,
+          "image": "https://upload.wikimedia.org/wikipedia/en/b/bc/System_of_a_down.jpg",
+          "stock": 5
+        },
+        {
+          "productId": "soad-003",
+          "albumTitle": "Mezmerize",
+          "price": 30.0,
+          "releaseYear": 2005,
+          "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Mezmerize-LP.jpg/250px-Mezmerize-LP.jpg",
+          "stock": 9
+        }
+      ]
+    },
+    {
+      "id": "tool",
+      "bandName": "Tool",
+      "genre": "Progressive Metal",
+      "bandImage": "https://i.scdn.co/image/ab6761610000e5eb13f5472b709101616c87cba3",
+      "bio": "Formed in Los Angeles in 1990, Tool is known for their intricate, odd-metered compositions, philosophical lyrical themes, and a famously meticulous approach to visual and sonic art.",
+      "history": "Formed in Los Angeles in 1990, Tool is known for their intricate, odd-metered compositions, philosophical lyrical themes, and a famously meticulous approach to visual and sonic art. The band's perfectionism has resulted in some of the most critically acclaimed albums in metal history, with each release representing years of careful craftsmanship.",
+      "famousTracks": [
+        "Schism — 2001",
+        "Fear Inoculum — 2019",
+        "Vicarious — 2006",
+        "Forty Six & 2 — 1996",
+        "Lateralus — 2001"
+      ],
+      "achievements": [
+        "Won Grammy Award for Best Metal Performance",
+        "Pioneered progressive metal composition",
+        "Lateralus featured the Fibonacci sequence",
+        "Fear Inoculum broke streaming records",
+        "Over 20 years between album releases (intentional)"
+      ],
+      "vinyls": [
+        {
+          "productId": "tool-001",
+          "albumTitle": "Lateralus",
+          "price": 38.99,
+          "releaseYear": 2001,
+          "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Tool_-_Lateralus.jpg/250px-Tool_-_Lateralus.jpg",
+          "stock": 6
+        },
+        {
+          "productId": "tool-002",
+          "albumTitle": "10,000 Days",
+          "price": 36.5,
+          "releaseYear": 2006,
+          "image": "https://upload.wikimedia.org/wikipedia/en/f/f8/10000Days.jpg",
+          "stock": 4
+        },
+        {
+          "productId": "tool-003",
+          "albumTitle": "Ænima",
+          "price": 33.0,
+          "releaseYear": 1996,
+          "image": "https://upload.wikimedia.org/wikipedia/en/2/2f/Aenima.jpg",
+          "stock": 10
+        }
+      ]
+    },
+    {
+      "id": "slipknot",
+      "bandName": "Slipknot",
+      "genre": "Nu Metal / Groove Metal",
+      "bandImage": "https://i.scdn.co/image/ab6761610000e5ebd0cdb283a7384a0edb665182",
+      "bio": "Formed in Des Moines, Iowa in 1995, Slipknot is known for their nine-member lineup, masked stage personas, and brutally heavy, chaotic sound that redefined extreme metal for a new generation.",
+      "history": "Formed in Des Moines, Iowa in 1995, Slipknot redefined extreme metal with their nine-member lineup, masked stage personas, and brutally heavy, chaotic sound. The band became the gateway to heavy music for millions, known for their intense live performances and evolving production style that balances brutality with melody.",
+      "famousTracks": [
+        "Wait and Bleed — 1996",
+        "Duality — 2004",
+        "Psychosocial — 2008",
+        "Before I Forget — 2004",
+        "The Dying Song — 2022"
+      ],
+      "achievements": [
+        "Multi-platinum albums globally",
+        "Headliners at major metal festivals",
+        "Members wore unique masks (became iconic)",
+        "Evolved from shock metal to sophisticated composition",
+        "Influenced a generation of metal bands"
+      ],
+      "vinyls": [
+        {
+          "productId": "slk-001",
+          "albumTitle": "Iowa",
+          "price": 31.99,
+          "releaseYear": 2001,
+          "image": "https://upload.wikimedia.org/wikipedia/en/1/1d/Slipknot_Iowa.jpg",
+          "stock": 7
+        },
+        {
+          "productId": "slk-002",
+          "albumTitle": "Slipknot",
+          "price": 29.5,
+          "releaseYear": 1999,
+          "image": "https://upload.wikimedia.org/wikipedia/en/4/44/Slipknot_-_Slipknot2.jpg",
+          "stock": 11
+        },
+        {
+          "productId": "slk-003",
+          "albumTitle": "Vol. 3: The Subliminal Verses",
+          "price": 30.0,
+          "releaseYear": 2004,
+          "image": "https://upload.wikimedia.org/wikipedia/en/e/e9/Slipknot_-_Vol._3-_%28The_Subliminal_Verses%29.jpg",
+          "stock": 3
+        }
+      ]
+    },
+    {
+      "id": "rage-against-the-machine",
+      "bandName": "Rage Against the Machine",
+      "genre": "Rap Metal / Political Rock",
+      "bandImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO9xWRKBJXPOd8DHFlf1dt7DJpeSwl57jI2qkrbzyCR_NVkVzAbJMjJBeC&s=10",
+      "bio": "Formed in Los Angeles in 1991, Rage Against the Machine fused hip-hop cadences with thrash-heavy riffs and unapologetically radical politics, becoming one of the most influential and confrontational bands of the 90s.",
+      "history": "Formed in Los Angeles in 1991, Rage Against the Machine fused hip-hop cadences with thrash-heavy riffs and unapologetically radical politics. Though active for only 8 years before initially disbanding, their cultural impact was massive, serving as a template for politically engaged heavy music and protest art.",
+      "famousTracks": [
+        "Killing in the Name — 1992",
+        "Bulls on Parade — 1996",
+        "Wake Up — 1999",
+        "Guerrilla Radio — 1999",
+        "Take the Power Back — 1992"
+      ],
+      "achievements": [
+        "Best-selling rap metal band",
+        "Broke barriers between rap and metal genres",
+        "Political activism became part of their brand",
+        "Sold over 16 million records worldwide",
+        "Reunited multiple times for benefit concerts"
+      ],
+      "vinyls": [
+        {
+          "productId": "ratm-001",
+          "albumTitle": "Rage Against the Machine",
+          "price": 29.99,
+          "releaseYear": 1992,
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Rage_Against_the_Machine_cover.jpg",
+          "stock": 14
+        },
+        {
+          "productId": "ratm-002",
+          "albumTitle": "Evil Empire",
+          "price": 28.5,
+          "releaseYear": 1996,
+          "image": "https://upload.wikimedia.org/wikipedia/en/4/45/Rage_Against_the_Machine_-_Evil_Empire.png",
+          "stock": 6
+        },
+        {
+          "productId": "ratm-003",
+          "albumTitle": "The Battle of Los Angeles",
+          "price": 31.0,
+          "releaseYear": 1999,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkizK9fNnqMHJ4Wn35VubBaix4Vggf1lU3NW6f23fgA&s=10",
+          "stock": 9
+        }
+      ]
+    },
+    {
+      "id": "korn",
+      "bandName": "Korn",
+      "genre": "Nu Metal",
+      "bandImage": "https://thefader-res.cloudinary.com/private_images/w_1440,c_limit,f_auto,q_auto:best/GettyImages-85217968_qklcs4/korn-freak-leash-oral-history.jpg ",
+      "bio": "Formed in Bakersfield, California in 1993, Korn pioneered the nu metal sound with detuned seven-string riffs, raw emotional lyrics, and a bass-and-groove-driven heaviness that reshaped heavy music in the late 90s.",
+      "history": "Formed in Bakersfield, California in 1993, Korn pioneered the nu metal sound with detuned seven-string riffs, raw emotional lyrics, and a bass-and-groove-driven heaviness that reshaped heavy music in the late 90s. Jonathan Davis's emotional vulnerability combined with Fieldy's innovative bass work created a sonic blueprint that countless bands would follow.",
+      "famousTracks": [
+        "Freak on a Leash — 1998",
+        "Got the Life — 1998",
+        "Somebody Told Me — 2002",
+        "Blind — 1994",
+        "Make Me Bad — 1998"
+      ],
+      "achievements": [
+        "Pioneers of the nu metal movement",
+        "Over 40 million records sold worldwide",
+        "Multiple Grammy nominations and wins",
+        "Influenced the sound of extreme metal",
+        "Jonathan Davis became an icon of 90s metal"
+      ],
+      "vinyls": [
+        {
+          "productId": "korn-001",
+          "albumTitle": "Korn",
+          "price": 27.99,
+          "releaseYear": 1994,
+          "image": "https://upload.wikimedia.org/wikipedia/en/1/16/Korn-Korn.jpg",
+          "stock": 10
+        },
+        {
+          "productId": "korn-002",
+          "albumTitle": "Follow the Leader",
+          "price": 30.5,
+          "releaseYear": 1998,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSxadwJ9GkeQrLRomZrvpPWN6gY6sxAhIf637RHU-nzQ5q9URDYA6QGdw4&s=10",
+          "stock": 8
+        },
+        {
+          "productId": "korn-003",
+          "albumTitle": "Issues",
+          "price": 29.0,
+          "releaseYear": 1999,
+          "image": "https://upload.wikimedia.org/wikipedia/en/b/b6/KoRnIssues.jpg",
+          "stock": 5
+        }
+      ]
+    }
+  ]
+}
