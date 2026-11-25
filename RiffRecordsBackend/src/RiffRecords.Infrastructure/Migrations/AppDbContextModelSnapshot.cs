@@ -114,20 +114,31 @@ namespace RiffRecords.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("DurationSeconds")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsFamous")
+                        .HasColumnType("bit");
+
                     b.Property<string>("TrackName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("VinylId")
+                    b.Property<int>("TrackNumber")
                         .HasColumnType("int");
 
-                    b.Property<int>("Year")
+                    b.Property<int>("VinylId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("VinylId");
+                    b.HasIndex("VinylId", "TrackNumber")
+                        .IsUnique();
+
+                    b.HasIndex(new[] { "VinylId" }, "IX_Tracks_OneFamousPerVinyl")
+                        .IsUnique()
+                        .HasFilter("[IsFamous] = 1");
 
                     b.ToTable("Track");
                 });
@@ -148,14 +159,26 @@ namespace RiffRecords.Infrastructure.Migrations
                     b.Property<int>("BandId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Label")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(10, 2)
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("ReleaseYear")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RuntimeSeconds")
                         .HasColumnType("int");
 
                     b.Property<int>("Stock")

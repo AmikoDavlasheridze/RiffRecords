@@ -8,7 +8,9 @@ namespace RiffRecords.Domain.Entities.Band
     {
         public int Id { get; set; }
         public string TrackName { get; set; } = string.Empty;
-        public int Year { get; set; }
+        public int TrackNumber { get; set; }
+        public int? DurationSeconds { get; set; }
+        public bool IsFamous { get; set; }
 
 
         public int VinylId { get; set; }

@@ -12,10 +12,27 @@ namespace RiffRecords.Domain.Entities.Band
         public int ReleaseYear { get; set; }
         public string Image { get; set; } = string.Empty;
         public int Stock { get; private set; }
+        public string? Description { get; set; }
+        public string? Label { get; set; }
+        public int? RuntimeSeconds { get; set; }
 
         public int BandId { get; set; }
         public Band Band { get; set; }
         public ICollection<Track> Tracks { get; set; } = new List<Track>();
+
+        public void AddTrack(int trackNumber, string name, int? durationSeconds, bool isFamous)
+        {
+            if (isFamous && Tracks.Any(t => t.IsFamous))
+                throw new InvalidOperationException("An album can only have one famous track");
+
+            Tracks.Add(new Track
+            {
+                TrackNumber = trackNumber,
+                TrackName = name,
+                DurationSeconds = durationSeconds,
+                IsFamous = isFamous
+            });
+        }
 
         public void DecreaseStock(int quantity)
         {

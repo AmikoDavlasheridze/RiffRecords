@@ -12,7 +12,7 @@ namespace RiffRecords.Application.Dtos
         string Slug
     );
 
-    // A vinyl as shown inside its band's details: no BandId/BandName, plus its tracks.
+    // A vinyl as shown inside its band's details: no BandId/BandName, plus album info and tracklist.
     public record BandVinylDto(
         int VinylId,
         string AlbumTitle,
@@ -20,7 +20,10 @@ namespace RiffRecords.Application.Dtos
         int ReleaseYear,
         string Image,
         int Stock,
-        List<string> Tracks
+        string? Description,
+        string? Label,
+        int? RuntimeSeconds,
+        List<TrackDto> Tracks
     );
 
     // Everything a single band page needs, returned by GET api/band/{id}.

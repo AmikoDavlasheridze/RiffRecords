@@ -52,10 +52,10 @@ async function loadBandBio() {
     const tracksList = document.getElementById("famousTracksList");
     // Famous tracks now live on each album: list them with the album they come from.
     band.vinyls.forEach(album => {
-      album.tracks.forEach(track => {
+      album.tracks.filter(track => track.isFamous).forEach(track => {
         const li = document.createElement("li");
         li.className = "track-title";
-        li.textContent = `${track} — ${album.albumTitle} (${album.releaseYear})`;
+        li.textContent = `${track.name} — ${album.albumTitle} (${album.releaseYear})`;
         tracksList.appendChild(li);
       });
     });

@@ -22,10 +22,76 @@
           "releaseYear": 2000,
           "image": "https://i.scdn.co/image/ab67616d00001e025c53799f473fa3e1a48c00ed",
           "stock": 12,
+          "description": "Deftones' third album and their breakthrough, swapping straight nu-metal aggression for atmosphere, trip-hop textures and Chino Moreno's dreamier vocals. Tool's Maynard James Keenan guests on \"Passenger\", and \"Elite\" won the band a Grammy.",
+          "label": "Maverick",
+          "runtimeSeconds": 2923,
           "tracks": [
-            "Digital Bath",
-            "Passenger",
-            "Change (In the House of Flies)"
+            {
+              "number": 1,
+              "name": "Feiticeira",
+              "durationSeconds": 189,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Digital Bath",
+              "durationSeconds": 255,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Elite",
+              "durationSeconds": 241,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Rx Queen",
+              "durationSeconds": 267,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Street Carp",
+              "durationSeconds": 161,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Teenager",
+              "durationSeconds": 200,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Knife Prty",
+              "durationSeconds": 289,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Korea",
+              "durationSeconds": 203,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Passenger",
+              "durationSeconds": 367,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Change (In the House of Flies)",
+              "durationSeconds": 299,
+              "isFamous": true
+            },
+            {
+              "number": 11,
+              "name": "Pink Maggit",
+              "durationSeconds": 452,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -35,7 +101,71 @@
           "releaseYear": 1997,
           "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_CbMafiSDw9cpV8fRFU0Tzzi2KIi3gtkUQwAybSPeA&s",
           "stock": 8,
-          "tracks": []
+          "description": "The second Deftones record, produced by Terry Date, where their trademark swing between crushing riffs and quiet tension first clicked. Home to \"My Own Summer (Shove It)\" and \"Be Quiet and Drive (Far Away)\", with Max Cavalera guesting on \"Headup\".",
+          "label": "Maverick",
+          "runtimeSeconds": 2549,
+          "tracks": [
+            {
+              "number": 1,
+              "name": "My Own Summer (Shove It)",
+              "durationSeconds": 215,
+              "isFamous": true
+            },
+            {
+              "number": 2,
+              "name": "Lhabia",
+              "durationSeconds": 251,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Mascara",
+              "durationSeconds": 225,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Around the Fur",
+              "durationSeconds": 211,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Rickets",
+              "durationSeconds": 162,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Be Quiet and Drive (Far Away)",
+              "durationSeconds": 308,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Lotion",
+              "durationSeconds": 237,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Dai the Flu",
+              "durationSeconds": 276,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Headup",
+              "durationSeconds": 372,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "MX",
+              "durationSeconds": 292,
+              "isFamous": false
+            }
+          ]
         },
         {
           "productId": "dft-003",
@@ -44,7 +174,77 @@
           "releaseYear": 2010,
           "image": "https://upload.wikimedia.org/wikipedia/en/8/8b/Deftones_-_Diamond_Eyes.jpg",
           "stock": 0,
-          "tracks": []
+          "description": "Made after bassist Chi Cheng's car accident, with Sergio Vega stepping in on bass, Diamond Eyes is a punchy, defiant comeback. At just over 41 minutes it is Deftones' shortest album.",
+          "label": "Reprise",
+          "runtimeSeconds": 2482,
+          "tracks": [
+            {
+              "number": 1,
+              "name": "Diamond Eyes",
+              "durationSeconds": 189,
+              "isFamous": true
+            },
+            {
+              "number": 2,
+              "name": "Royal",
+              "durationSeconds": 211,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "CMND/CTRL",
+              "durationSeconds": 146,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "You've Seen the Butcher",
+              "durationSeconds": 214,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Beauty School",
+              "durationSeconds": 290,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Prince",
+              "durationSeconds": 217,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Rocket Skates",
+              "durationSeconds": 258,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Sextape",
+              "durationSeconds": 242,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Risk",
+              "durationSeconds": 217,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "976-EVIL",
+              "durationSeconds": 272,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "This Place Is Death",
+              "durationSeconds": 226,
+              "isFamous": false
+            }
+          ]
         }
       ]
     },
@@ -70,9 +270,94 @@
           "releaseYear": 2001,
           "image": "https://upload.wikimedia.org/wikipedia/en/6/64/SystemofaDownToxicityalbumcover.jpg",
           "stock": 15,
+          "description": "System of a Down's second album, produced with Rick Rubin, topped the Billboard 200 and made the band a global name. Armenian folk melodies, thrash bursts and political lyrics collide on \"Chop Suey!\", \"Aerials\" and the title track.",
+          "label": "American / Columbia",
+          "runtimeSeconds": 2502,
           "tracks": [
-            "Chop Suey!",
-            "Toxicity"
+            {
+              "number": 1,
+              "name": "Prison Song",
+              "durationSeconds": 201,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Needles",
+              "durationSeconds": 193,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Deer Dance",
+              "durationSeconds": 174,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Jet Pilot",
+              "durationSeconds": 126,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "X",
+              "durationSeconds": 118,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Chop Suey!",
+              "durationSeconds": 210,
+              "isFamous": true
+            },
+            {
+              "number": 7,
+              "name": "Bounce",
+              "durationSeconds": 114,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Forest",
+              "durationSeconds": 240,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "ATWA",
+              "durationSeconds": 176,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Science",
+              "durationSeconds": 162,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Shimmy",
+              "durationSeconds": 110,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "Toxicity",
+              "durationSeconds": 218,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "Psycho",
+              "durationSeconds": 225,
+              "isFamous": false
+            },
+            {
+              "number": 14,
+              "name": "Aerials",
+              "durationSeconds": 235,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -82,8 +367,88 @@
           "releaseYear": 1998,
           "image": "https://upload.wikimedia.org/wikipedia/en/b/bc/System_of_a_down.jpg",
           "stock": 5,
+          "description": "The raw, fast and gleefully strange debut, produced by Rick Rubin. Singles \"Sugar\" and \"Spiders\" set up everything that followed, and the album later went platinum on the back of Toxicity's success.",
+          "label": "American / Columbia",
+          "runtimeSeconds": 2436,
           "tracks": [
-            "Sugar"
+            {
+              "number": 1,
+              "name": "Suite-Pee",
+              "durationSeconds": 151,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Know",
+              "durationSeconds": 176,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Sugar",
+              "durationSeconds": 153,
+              "isFamous": true
+            },
+            {
+              "number": 4,
+              "name": "Suggestions",
+              "durationSeconds": 164,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Spiders",
+              "durationSeconds": 215,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "DDevil",
+              "durationSeconds": 103,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Soil",
+              "durationSeconds": 205,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "War?",
+              "durationSeconds": 160,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Mind",
+              "durationSeconds": 376,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Peephole",
+              "durationSeconds": 244,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "CUBErt",
+              "durationSeconds": 109,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "Darts",
+              "durationSeconds": 162,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "P.L.U.C.K.",
+              "durationSeconds": 218,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -93,8 +458,76 @@
           "releaseYear": 2005,
           "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Mezmerize-LP.jpg/250px-Mezmerize-LP.jpg",
           "stock": 9,
+          "description": "The first half of the Mezmerize/Hypnotize double album, and at about 36 minutes the band's shortest studio record. \"B.Y.O.B.\" won the Grammy for Best Hard Rock Performance.",
+          "label": "American / Columbia",
+          "runtimeSeconds": 2167,
           "tracks": [
-            "B.Y.O.B."
+            {
+              "number": 1,
+              "name": "Soldier Side - Intro",
+              "durationSeconds": 64,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "B.Y.O.B.",
+              "durationSeconds": 255,
+              "isFamous": true
+            },
+            {
+              "number": 3,
+              "name": "Revenga",
+              "durationSeconds": 228,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Cigaro",
+              "durationSeconds": 131,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Radio/Video",
+              "durationSeconds": 249,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "This Cocaine Makes Me Feel Like I'm on This Song",
+              "durationSeconds": 128,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Violent Pornography",
+              "durationSeconds": 211,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Question!",
+              "durationSeconds": 200,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Sad Statue",
+              "durationSeconds": 205,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Old School Hollywood",
+              "durationSeconds": 176,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Lost in Hollywood",
+              "durationSeconds": 320,
+              "isFamous": false
+            }
           ]
         }
       ]
@@ -121,9 +554,88 @@
           "releaseYear": 2001,
           "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Tool_-_Lateralus.jpg/250px-Tool_-_Lateralus.jpg",
           "stock": 6,
+          "description": "Tool's third album: long, interlocking progressive pieces built on odd time signatures, with the title track's vocal phrasing following the Fibonacci sequence. \"Schism\" won the Grammy for Best Metal Performance.",
+          "label": "Volcano",
+          "runtimeSeconds": 4733,
           "tracks": [
-            "Schism",
-            "Lateralus"
+            {
+              "number": 1,
+              "name": "The Grudge",
+              "durationSeconds": 516,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Eon Blue Apocalypse",
+              "durationSeconds": 64,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "The Patient",
+              "durationSeconds": 434,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Mantra",
+              "durationSeconds": 72,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Schism",
+              "durationSeconds": 408,
+              "isFamous": true
+            },
+            {
+              "number": 6,
+              "name": "Parabol",
+              "durationSeconds": 184,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Parabola",
+              "durationSeconds": 363,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Ticks & Leeches",
+              "durationSeconds": 490,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Lateralus",
+              "durationSeconds": 564,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Disposition",
+              "durationSeconds": 286,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Reflection",
+              "durationSeconds": 667,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "Triad",
+              "durationSeconds": 526,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "Faaip de Oiad",
+              "durationSeconds": 159,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -133,8 +645,76 @@
           "releaseYear": 2006,
           "image": "https://upload.wikimedia.org/wikipedia/en/f/f8/10000Days.jpg",
           "stock": 4,
+          "description": "Tool's fourth album opens with \"Vicarious\" and centres on the two-part \"Wings for Marie\" / \"10,000 Days\", Maynard James Keenan's tribute to his mother. It debuted at number one on the Billboard 200.",
+          "label": "Tool Dissectional / Volcano",
+          "runtimeSeconds": 4545,
           "tracks": [
-            "Vicarious"
+            {
+              "number": 1,
+              "name": "Vicarious",
+              "durationSeconds": 426,
+              "isFamous": true
+            },
+            {
+              "number": 2,
+              "name": "Jambi",
+              "durationSeconds": 448,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Wings for Marie (Pt 1)",
+              "durationSeconds": 371,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "10,000 Days (Wings Pt 2)",
+              "durationSeconds": 673,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "The Pot",
+              "durationSeconds": 381,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Lipan Conjuring",
+              "durationSeconds": 71,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Lost Keys (Blame Hofmann)",
+              "durationSeconds": 226,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Rosetta Stoned",
+              "durationSeconds": 671,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Intension",
+              "durationSeconds": 441,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Right in Two",
+              "durationSeconds": 535,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Viginti Tres",
+              "durationSeconds": 302,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -144,8 +724,100 @@
           "releaseYear": 1996,
           "image": "https://upload.wikimedia.org/wikipedia/en/2/2f/Aenima.jpg",
           "stock": 10,
+          "description": "Tool's second album and the first with bassist Justin Chancellor: darker and heavier than Undertow, broken up by strange, sardonic interludes. The track \"Ænema\" won the Grammy for Best Metal Performance.",
+          "label": "Zoo / Volcano",
+          "runtimeSeconds": 4638,
           "tracks": [
-            "Forty Six & 2"
+            {
+              "number": 1,
+              "name": "Stinkfist",
+              "durationSeconds": 311,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Eulogy",
+              "durationSeconds": 508,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "H.",
+              "durationSeconds": 367,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Useful Idiot",
+              "durationSeconds": 38,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Forty Six & 2",
+              "durationSeconds": 364,
+              "isFamous": true
+            },
+            {
+              "number": 6,
+              "name": "Message to Harry Manback",
+              "durationSeconds": 113,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Hooker with a Penis",
+              "durationSeconds": 273,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Intermission",
+              "durationSeconds": 56,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Jimmy",
+              "durationSeconds": 324,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Die Eier von Satan",
+              "durationSeconds": 137,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Pushit",
+              "durationSeconds": 595,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "Cesaro Summability",
+              "durationSeconds": 86,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "Ænema",
+              "durationSeconds": 399,
+              "isFamous": false
+            },
+            {
+              "number": 14,
+              "name": "(-) Ions",
+              "durationSeconds": 240,
+              "isFamous": false
+            },
+            {
+              "number": 15,
+              "name": "Third Eye",
+              "durationSeconds": 827,
+              "isFamous": false
+            }
           ]
         }
       ]
@@ -172,7 +844,95 @@
           "releaseYear": 2001,
           "image": "https://upload.wikimedia.org/wikipedia/en/1/1d/Slipknot_Iowa.jpg",
           "stock": 7,
-          "tracks": []
+          "description": "Slipknot's second album is widely seen as the heaviest and bleakest record in their catalog, made while the band was close to falling apart. It closes with the 15-minute title track.",
+          "label": "Roadrunner",
+          "runtimeSeconds": 3977,
+          "tracks": [
+            {
+              "number": 1,
+              "name": "(515)",
+              "durationSeconds": 59,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "People = Shit",
+              "durationSeconds": 215,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Disasterpiece",
+              "durationSeconds": 308,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "My Plague",
+              "durationSeconds": 220,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Everything Ends",
+              "durationSeconds": 254,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "The Heretic Anthem",
+              "durationSeconds": 253,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Gently",
+              "durationSeconds": 294,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Left Behind",
+              "durationSeconds": 241,
+              "isFamous": true
+            },
+            {
+              "number": 9,
+              "name": "The Shape",
+              "durationSeconds": 217,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "I Am Hated",
+              "durationSeconds": 157,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Skin Ticket",
+              "durationSeconds": 401,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "New Abortion",
+              "durationSeconds": 216,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "Metabolic",
+              "durationSeconds": 239,
+              "isFamous": false
+            },
+            {
+              "number": 14,
+              "name": "Iowa",
+              "durationSeconds": 903,
+              "isFamous": false
+            }
+          ]
         },
         {
           "productId": "slk-002",
@@ -181,8 +941,100 @@
           "releaseYear": 1999,
           "image": "https://upload.wikimedia.org/wikipedia/en/4/44/Slipknot_-_Slipknot2.jpg",
           "stock": 11,
+          "description": "The self-titled debut that introduced the masked nine-piece from Des Moines, produced by Ross Robinson. \"Wait and Bleed\" earned the band its first Grammy nomination.",
+          "label": "Roadrunner",
+          "runtimeSeconds": 3624,
           "tracks": [
-            "Wait and Bleed"
+            {
+              "number": 1,
+              "name": "742617000027",
+              "durationSeconds": 36,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "(sic)",
+              "durationSeconds": 200,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Eyeless",
+              "durationSeconds": 236,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Wait and Bleed",
+              "durationSeconds": 147,
+              "isFamous": true
+            },
+            {
+              "number": 5,
+              "name": "Surfacing",
+              "durationSeconds": 218,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Spit It Out",
+              "durationSeconds": 159,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Tattered & Torn",
+              "durationSeconds": 174,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Frail Limb Nursery",
+              "durationSeconds": 45,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Purity",
+              "durationSeconds": 254,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Liberate",
+              "durationSeconds": 186,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Prosthetics",
+              "durationSeconds": 298,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "No Life",
+              "durationSeconds": 167,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "Diluted",
+              "durationSeconds": 203,
+              "isFamous": false
+            },
+            {
+              "number": 14,
+              "name": "Only One",
+              "durationSeconds": 146,
+              "isFamous": false
+            },
+            {
+              "number": 15,
+              "name": "Scissors",
+              "durationSeconds": 1155,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -192,9 +1044,94 @@
           "releaseYear": 2004,
           "image": "https://upload.wikimedia.org/wikipedia/en/e/e9/Slipknot_-_Vol._3-_%28The_Subliminal_Verses%29.jpg",
           "stock": 3,
+          "description": "Produced by Rick Rubin, Vol. 3 is Slipknot's most melodic and experimental record, from the ballad \"Vermilion Pt. 2\" to \"Duality\". \"Before I Forget\" won the Grammy for Best Metal Performance.",
+          "label": "Roadrunner",
+          "runtimeSeconds": 3608,
           "tracks": [
-            "Duality",
-            "Before I Forget"
+            {
+              "number": 1,
+              "name": "Prelude 3.0",
+              "durationSeconds": 237,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "The Blister Exists",
+              "durationSeconds": 319,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Three Nil",
+              "durationSeconds": 288,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Duality",
+              "durationSeconds": 252,
+              "isFamous": true
+            },
+            {
+              "number": 5,
+              "name": "Opium of the People",
+              "durationSeconds": 192,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Circle",
+              "durationSeconds": 262,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Welcome",
+              "durationSeconds": 195,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Vermilion",
+              "durationSeconds": 316,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Pulse of the Maggots",
+              "durationSeconds": 259,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Before I Forget",
+              "durationSeconds": 278,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Vermilion Pt. 2",
+              "durationSeconds": 224,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "The Nameless",
+              "durationSeconds": 268,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "The Virus of Life",
+              "durationSeconds": 325,
+              "isFamous": false
+            },
+            {
+              "number": 14,
+              "name": "Danger – Keep Away",
+              "durationSeconds": 193,
+              "isFamous": false
+            }
           ]
         }
       ]
@@ -221,10 +1158,70 @@
           "releaseYear": 1992,
           "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Rage_Against_the_Machine_cover.jpg",
           "stock": 14,
+          "description": "The debut that fused hip-hop vocals, funk-metal grooves and radical politics into something new. \"Killing in the Name\" became one of the defining protest anthems of the 1990s.",
+          "label": "Epic",
+          "runtimeSeconds": 3172,
           "tracks": [
-            "Killing in the Name",
-            "Take the Power Back",
-            "Wake Up"
+            {
+              "number": 1,
+              "name": "Bombtrack",
+              "durationSeconds": 242,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Killing in the Name",
+              "durationSeconds": 314,
+              "isFamous": true
+            },
+            {
+              "number": 3,
+              "name": "Take the Power Back",
+              "durationSeconds": 336,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Settle for Nothing",
+              "durationSeconds": 289,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Bullet in the Head",
+              "durationSeconds": 308,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Know Your Enemy",
+              "durationSeconds": 297,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Wake Up",
+              "durationSeconds": 366,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Fistful of Steel",
+              "durationSeconds": 332,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Township Rebellion",
+              "durationSeconds": 322,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Freedom",
+              "durationSeconds": 366,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -234,8 +1231,76 @@
           "releaseYear": 1996,
           "image": "https://upload.wikimedia.org/wikipedia/en/4/45/Rage_Against_the_Machine_-_Evil_Empire.png",
           "stock": 6,
+          "description": "Rage's second album debuted at number one on the Billboard 200, with Tom Morello's guitar sounding more like a turntable than ever on \"Bulls on Parade\". \"Tire Me\" won the Grammy for Best Metal Performance.",
+          "label": "Epic",
+          "runtimeSeconds": 2794,
           "tracks": [
-            "Bulls on Parade"
+            {
+              "number": 1,
+              "name": "People of the Sun",
+              "durationSeconds": 150,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Bulls on Parade",
+              "durationSeconds": 229,
+              "isFamous": true
+            },
+            {
+              "number": 3,
+              "name": "Vietnow",
+              "durationSeconds": 279,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Revolver",
+              "durationSeconds": 330,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Snakecharmer",
+              "durationSeconds": 236,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Tire Me",
+              "durationSeconds": 180,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Down Rodeo",
+              "durationSeconds": 320,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Without a Face",
+              "durationSeconds": 216,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Wind Below",
+              "durationSeconds": 350,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Roll Right",
+              "durationSeconds": 262,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Year of tha Boomerang",
+              "durationSeconds": 242,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -245,8 +1310,82 @@
           "releaseYear": 1999,
           "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkizK9fNnqMHJ4Wn35VubBaix4Vggf1lU3NW6f23fgA&s=10",
           "stock": 9,
+          "description": "The band's last album of original material also debuted at number one, tighter and leaner than its predecessors. \"Guerrilla Radio\" won the Grammy for Best Hard Rock Performance.",
+          "label": "Epic",
+          "runtimeSeconds": 2710,
           "tracks": [
-            "Guerrilla Radio"
+            {
+              "number": 1,
+              "name": "Testify",
+              "durationSeconds": 210,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Guerrilla Radio",
+              "durationSeconds": 206,
+              "isFamous": true
+            },
+            {
+              "number": 3,
+              "name": "Calm Like a Bomb",
+              "durationSeconds": 298,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Mic Check",
+              "durationSeconds": 213,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Sleep Now in the Fire",
+              "durationSeconds": 205,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Born of a Broken Man",
+              "durationSeconds": 280,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Born as Ghosts",
+              "durationSeconds": 202,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Maria",
+              "durationSeconds": 228,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Voice of the Voiceless",
+              "durationSeconds": 151,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "New Millennium Homes",
+              "durationSeconds": 224,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Ashes in the Fall",
+              "durationSeconds": 277,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "War Within a Breath",
+              "durationSeconds": 216,
+              "isFamous": false
+            }
           ]
         }
       ]
@@ -273,8 +1412,82 @@
           "releaseYear": 1994,
           "image": "https://upload.wikimedia.org/wikipedia/en/1/16/Korn-Korn.jpg",
           "stock": 10,
+          "description": "The 1994 debut, produced by Ross Robinson, is widely credited with starting nu metal: down-tuned seven-string riffs, slap bass and Jonathan Davis's painfully personal lyrics. It opens with \"Blind\".",
+          "label": "Immortal / Epic",
+          "runtimeSeconds": 3948,
           "tracks": [
-            "Blind"
+            {
+              "number": 1,
+              "name": "Blind",
+              "durationSeconds": 259,
+              "isFamous": true
+            },
+            {
+              "number": 2,
+              "name": "Ball Tongue",
+              "durationSeconds": 270,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Need To",
+              "durationSeconds": 242,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Clown",
+              "durationSeconds": 275,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Divine",
+              "durationSeconds": 172,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Faget",
+              "durationSeconds": 350,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Shoots and Ladders",
+              "durationSeconds": 322,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Predictable",
+              "durationSeconds": 272,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Fake",
+              "durationSeconds": 291,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Lies",
+              "durationSeconds": 202,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Helmet in the Bush",
+              "durationSeconds": 242,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "Daddy",
+              "durationSeconds": 1051,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -284,9 +1497,88 @@
           "releaseYear": 1998,
           "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSxadwJ9GkeQrLRomZrvpPWN6gY6sxAhIf637RHU-nzQ5q9URDYA6QGdw4&s=10",
           "stock": 8,
+          "description": "Korn's commercial breakthrough debuted at number one on the Billboard 200, and the \"Freak on a Leash\" video won a Grammy. Guests include Ice Cube and Fred Durst.",
+          "label": "Immortal / Epic",
+          "runtimeSeconds": 4141,
           "tracks": [
-            "Got the Life",
-            "Freak on a Leash"
+            {
+              "number": 1,
+              "name": "It's On!",
+              "durationSeconds": 268,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Freak on a Leash",
+              "durationSeconds": 255,
+              "isFamous": true
+            },
+            {
+              "number": 3,
+              "name": "Got the Life",
+              "durationSeconds": 225,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "Dead Bodies Everywhere",
+              "durationSeconds": 284,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Children of the Korn",
+              "durationSeconds": 232,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "B.B.K.",
+              "durationSeconds": 236,
+              "isFamous": false
+            },
+            {
+              "number": 7,
+              "name": "Pretty",
+              "durationSeconds": 252,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "All in the Family",
+              "durationSeconds": 288,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Reclaim My Place",
+              "durationSeconds": 272,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Justin",
+              "durationSeconds": 257,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Seed",
+              "durationSeconds": 354,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "Cameltosis",
+              "durationSeconds": 278,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "My Gift to You",
+              "durationSeconds": 940,
+              "isFamous": false
+            }
           ]
         },
         {
@@ -296,8 +1588,106 @@
           "releaseYear": 1999,
           "image": "https://upload.wikimedia.org/wikipedia/en/b/b6/KoRnIssues.jpg",
           "stock": 5,
+          "description": "Korn's fourth album also debuted at number one, mixing short interludes with singles \"Falling Away from Me\", \"Make Me Bad\" and \"Somebody Someone\". Its cover was picked from a fan art contest.",
+          "label": "Immortal / Epic",
+          "runtimeSeconds": 3187,
           "tracks": [
-            "Make Me Bad"
+            {
+              "number": 1,
+              "name": "Dead",
+              "durationSeconds": 72,
+              "isFamous": false
+            },
+            {
+              "number": 2,
+              "name": "Falling Away from Me",
+              "durationSeconds": 269,
+              "isFamous": false
+            },
+            {
+              "number": 3,
+              "name": "Trash",
+              "durationSeconds": 207,
+              "isFamous": false
+            },
+            {
+              "number": 4,
+              "name": "4U",
+              "durationSeconds": 102,
+              "isFamous": false
+            },
+            {
+              "number": 5,
+              "name": "Beg for Me",
+              "durationSeconds": 233,
+              "isFamous": false
+            },
+            {
+              "number": 6,
+              "name": "Make Me Bad",
+              "durationSeconds": 235,
+              "isFamous": true
+            },
+            {
+              "number": 7,
+              "name": "It's Gonna Go Away",
+              "durationSeconds": 89,
+              "isFamous": false
+            },
+            {
+              "number": 8,
+              "name": "Wake Up",
+              "durationSeconds": 247,
+              "isFamous": false
+            },
+            {
+              "number": 9,
+              "name": "Am I Going Crazy",
+              "durationSeconds": 60,
+              "isFamous": false
+            },
+            {
+              "number": 10,
+              "name": "Hey Daddy",
+              "durationSeconds": 224,
+              "isFamous": false
+            },
+            {
+              "number": 11,
+              "name": "Somebody Someone",
+              "durationSeconds": 227,
+              "isFamous": false
+            },
+            {
+              "number": 12,
+              "name": "No Way",
+              "durationSeconds": 247,
+              "isFamous": false
+            },
+            {
+              "number": 13,
+              "name": "Let's Get This Party Started",
+              "durationSeconds": 221,
+              "isFamous": false
+            },
+            {
+              "number": 14,
+              "name": "Wish You Could Be Me",
+              "durationSeconds": 67,
+              "isFamous": false
+            },
+            {
+              "number": 15,
+              "name": "Counting",
+              "durationSeconds": 217,
+              "isFamous": false
+            },
+            {
+              "number": 16,
+              "name": "Dirty",
+              "durationSeconds": 470,
+              "isFamous": false
+            }
           ]
         }
       ]

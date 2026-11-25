@@ -51,15 +51,16 @@ function updateCartBadge() {
 
 
 function flashAdded(productId) {
-  const btn = document.querySelector(`[data-id="${productId}"].add-to-cart, [data-id="${productId}"].quick-add`);
-  if (!btn) return;
-  const original = btn.textContent;
-  btn.textContent = "Added ✓";
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = original;
-    btn.disabled = false;
-  }, 900);
+  const buttons = document.querySelectorAll(`[data-id="${productId}"].add-to-cart, [data-id="${productId}"].quick-add`);
+  buttons.forEach((btn) => {
+    const original = btn.textContent;
+    btn.textContent = "Added ✓";
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.disabled = false;
+    }, 900);
+  });
 }
 
 

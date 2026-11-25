@@ -43,11 +43,16 @@ namespace RiffRecords.Infrastructure.Persistence.Seed
 
                 foreach (var v in item.Vinyls)
                 {
-                    var vinyl = new Vinyl(v.AlbumTitle, v.Price, v.ReleaseYear, v.Image, 0, v.Stock);
+                    var vinyl = new Vinyl(v.AlbumTitle, v.Price, v.ReleaseYear, v.Image, 0, v.Stock)
+                    {
+                        Description = v.Description,
+                        Label = v.Label,
+                        RuntimeSeconds = v.RuntimeSeconds
+                    };
 
-                    // A track's year is its album's release year.
-                    foreach (var trackName in v.Tracks ?? [])
-                        vinyl.Tracks.Add(new Track { TrackName = trackName, Year = v.ReleaseYear });
+                    // AddTrack enforces the one-famous-track-per-album rule.
+                    foreach (var t in (v.Tracks ?? []).OrderBy(t => t.Number))
+                        vinyl.AddTrack(t.Number, t.Name, t.DurationSeconds, t.IsFamous);
 
                     band.Vinyls.Add(vinyl);
                 }
@@ -80,6 +85,15 @@ namespace RiffRecords.Infrastructure.Persistence.Seed
             int ReleaseYear,
             string Image,
             int Stock,
-            List<string>? Tracks);
+            string? Description,
+            string? Label,
+            int? RuntimeSeconds,
+            List<CatalogTrack>? Tracks);
+
+        private sealed record CatalogTrack(
+            int Number,
+            string Name,
+            int? DurationSeconds,
+            bool IsFamous);
     }
 }

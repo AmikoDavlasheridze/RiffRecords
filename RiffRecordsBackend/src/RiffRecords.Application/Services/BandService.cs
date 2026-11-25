@@ -99,9 +99,16 @@ namespace RiffRecords.Application.Services
                         v.ReleaseYear,
                         v.Image,
                         v.Stock,
+                        v.Description,
+                        v.Label,
+                        v.RuntimeSeconds,
                         v.Tracks
-                            .OrderBy(t => t.Id)
-                            .Select(t => t.TrackName)
+                            .OrderBy(t => t.TrackNumber)
+                            .Select(t => new TrackDto(
+                                t.TrackNumber,
+                                t.TrackName,
+                                t.DurationSeconds,
+                                t.IsFamous))
                             .ToList()))
                     .ToList()
                 );

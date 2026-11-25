@@ -350,6 +350,216 @@ input:focus-visible {
   }
 }
 
+/* ---------- Album details (opens below the vinyl grid) ---------- */
+
+.vinyl-card {
+  cursor: pointer;
+}
+
+.vinyl-card.is-selected {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.album-details {
+  border-top: 1px solid var(--color-line);
+  scroll-margin-top: 72px;
+}
+
+.album-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.album-cover {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+.album-head .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-danger);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.album-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  margin-top: 6px;
+}
+
+.album-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+
+.album-meta div {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.album-meta div:nth-child(odd) {
+  border-right: 1px solid var(--color-line);
+}
+
+.album-meta div:nth-last-child(-n + 2) {
+  border-bottom: none;
+}
+
+.album-meta dt {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.album-meta dd {
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.album-description {
+  color: var(--color-muted);
+  max-width: 68ch;
+}
+
+.tracklist-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 8px;
+  margin-bottom: -10px;
+}
+
+.tracklist {
+  list-style: none;
+}
+
+.tracklist li {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.tracklist li:last-child {
+  border-bottom: none;
+}
+
+.track-no,
+.track-length {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.track-name {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tracklist li.is-famous {
+  background: rgba(245, 197, 24, 0.07);
+  border-left: 2px solid var(--color-accent);
+}
+
+.tracklist li.is-famous .track-name {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.famous-badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  padding: 2px 6px;
+  border-radius: var(--radius);
+}
+
+.album-buy {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-line);
+}
+
+.album-buy .price {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--color-accent);
+}
+
+.album-buy .stock-in,
+.album-buy .stock-out {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.album-buy .stock-out {
+  color: var(--color-danger);
+}
+
+.album-buy .btn {
+  margin-left: auto;
+}
+
+@media (min-width: 860px) {
+  .album-layout {
+    grid-template-columns: minmax(280px, 400px) 1fr;
+    gap: 48px;
+  }
+
+  .album-cover {
+    position: sticky;
+    top: 96px;
+  }
+
+  .album-meta {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .album-meta div {
+    border-bottom: none;
+    border-right: 1px solid var(--color-line);
+  }
+
+  .album-meta div:last-child {
+    border-right: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
