@@ -3,19 +3,22 @@ async function loadFeaturedBands() {
   if (!grid) return;
 
   try {
-    const res = await fetch("https://raw.githubusercontent.com/AmikoDavlasheridze/Finals-data/refs/heads/main/data.json");
-    const data = await res.json();
+    const res = await fetch(`${API_BASE_URL}/api/band`);
+    if (!res.ok) {
+      throw new Error(`API error: ${res.status}`);
+    }
+    const bands = await res.json();
 
-    data.bands.slice(0, 4).forEach((band) => {
+    bands.slice(0, 4).forEach((band) => {
       const link = document.createElement("a");
       link.className = "band-card";
-      link.href = `band-details.html?id=${band.id}`;
+      link.href = `band-details.html?id=${band.bandId}`;
 
       const media = document.createElement("div");
       media.className = "card-media";
 
       const img = document.createElement("img");
-      img.src = band.bandImage;
+      img.src = band.bandPicture;
       img.alt = band.bandName;
       media.appendChild(img);
 
@@ -39,7 +42,7 @@ async function loadFeaturedBands() {
   } catch (err) {
     const errorMsg = document.createElement("p");
     errorMsg.className = "stock-out";
-    errorMsg.textContent = "Couldn't load bands right now.";
+    errorMsg.textContent = "Couldn't load bands right now. Is the API running?";
     grid.appendChild(errorMsg);
     console.error(err);
   }
