@@ -26,9 +26,11 @@ async function loadBandDetails() {
   }
 
   try {
-    const res = await fetch("https://raw.githubusercontent.com/AmikoDavlasheridze/Finals-data/refs/heads/main/data.json");
-    const data = await res.json();
-    const band = data.bands.find((b) => b.id === bandId);
+    const res = await fetch(`${API_BASE_URL}/api/band/${encodeURIComponent(bandId)}`);
+    if (!res.ok && res.status !== 404) {
+      throw new Error(`API error: ${res.status}`);
+    }
+    const band = res.status === 404 ? null : await res.json();
 
     if (!band) {
       const emptyState = document.createElement("div");
@@ -50,8 +52,8 @@ async function loadBandDetails() {
 
     document.getElementById("bandGenre").textContent = band.genre;
     document.getElementById("bandName").textContent = band.bandName;
-    document.getElementById("bandBio").textContent = band.bio;
-    document.getElementById("bandImage").src = band.bandImage;
+    document.getElementById("bandBio").textContent = band.bio ?? "";
+    document.getElementById("bandImage").src = band.bandPicture;
     document.getElementById("bandImage").alt = band.bandName;
 
     const grid = document.getElementById("vinylGrid");
@@ -101,7 +103,7 @@ async function loadBandDetails() {
 
       const btn = document.createElement("button");
       btn.className = "btn btn-primary btn-block add-to-cart";
-      btn.dataset.id = v.productId;
+      btn.dataset.id = v.vinylId;
       btn.dataset.title = v.albumTitle;
       btn.dataset.price = v.price;
       btn.dataset.image = v.image;
@@ -127,7 +129,7 @@ async function loadBandDetails() {
     h2.textContent = "Something went wrong";
 
     const p = document.createElement("p");
-    p.textContent = "Couldn't load the catalog.";
+    p.textContent = "Couldn't load the catalog. Is the API running?";
 
     emptyState.appendChild(h2);
     emptyState.appendChild(p);

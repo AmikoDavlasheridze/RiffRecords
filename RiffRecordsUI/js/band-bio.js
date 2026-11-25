@@ -19,9 +19,11 @@ async function loadBandBio() {
   }
 
   try {
-    const res = await fetch("https://raw.githubusercontent.com/AmikoDavlasheridze/Finals-data/refs/heads/main/data.json");
-    const data = await res.json();
-    const band = data.bands.find(b => b.id === bandId);
+    const res = await fetch(`${API_BASE_URL}/api/band/${encodeURIComponent(bandId)}`);
+    if (!res.ok && res.status !== 404) {
+      throw new Error(`API error: ${res.status}`);
+    }
+    const band = res.status === 404 ? null : await res.json();
 
     if (!band) {
       const emptyState = document.createElement("div");
@@ -40,19 +42,22 @@ async function loadBandBio() {
 
     document.title = `${band.bandName} — RiffRecords`;
 
-    document.getElementById("bandImage").src = band.bandImage;
+    document.getElementById("bandImage").src = band.bandPicture;
     document.getElementById("bandImage").alt = band.bandName;
     document.getElementById("bandGenre").textContent = band.genre;
     document.getElementById("bandName").textContent = band.bandName;
-    document.getElementById("bandBio").textContent = band.bio;
-    document.getElementById("bandHistory").textContent = band.history;
+    document.getElementById("bandBio").textContent = band.bio ?? "";
+    document.getElementById("bandHistory").textContent = band.history ?? "";
 
     const tracksList = document.getElementById("famousTracksList");
-    band.famousTracks.forEach(track => {
-      const li = document.createElement("li");
-      li.className = "track-title";
-      li.textContent = track;
-      tracksList.appendChild(li);
+    // Famous tracks now live on each album: list them with the album they come from.
+    band.vinyls.forEach(album => {
+      album.tracks.forEach(track => {
+        const li = document.createElement("li");
+        li.className = "track-title";
+        li.textContent = `${track} — ${album.albumTitle} (${album.releaseYear})`;
+        tracksList.appendChild(li);
+      });
     });
 
     const albumsList = document.getElementById("discographyList");
@@ -82,7 +87,7 @@ async function loadBandBio() {
     emptyState.className = "section";
     const p = document.createElement("p");
     p.style.color = "var(--danger)";
-    p.textContent = "Couldn't load band data.";
+    p.textContent = "Couldn't load band data. Is the API running?";
     emptyState.appendChild(p);
     wrapper.appendChild(emptyState);
     console.error(err);

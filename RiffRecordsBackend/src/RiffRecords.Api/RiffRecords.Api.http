@@ -85,3 +85,9 @@ Authorization: Bearer {{userLogin.response.body.$.accessToken}}
 Content-Type: application/json
 
 { "vinylId": 99999 }
+
+### 15. Band details: bio, history, achievements, vinyls with tracks, expect 200
+GET {{host}}/api/band/1
+
+### 16. Unknown band, expect 404
+GET {{host}}/api/band/99999

@@ -71,19 +71,39 @@ namespace RiffRecords.Application.Services
                 )).ToList();
         }
 
-        public async Task<BandDto?> GetBandByIdAsync(int id)
+        public async Task<BandDetailsDto?> GetBandByIdAsync(int id)
         {
-            var band = await _bandRepository.GetBandByIdAsync(id);
+            var band = await _bandRepository.GetBandWithDetailsAsync(id);
 
             if (band == null)
                 return null;
 
-            return new BandDto(
+            return new BandDetailsDto(
                 band.BandId,
                 band.BandName,
                 band.BandPicture,
                 band.Genre,
-                band.Slug
+                band.Slug,
+                band.Bio?.BioText,
+                band.Bio?.HistoryText,
+                band.Achievements
+                    .OrderBy(a => a.Id)
+                    .Select(a => a.Description)
+                    .ToList(),
+                band.Vinyls
+                    .OrderBy(v => v.ReleaseYear)
+                    .Select(v => new BandVinylDto(
+                        v.VinylId,
+                        v.AlbumTitle,
+                        v.Price,
+                        v.ReleaseYear,
+                        v.Image,
+                        v.Stock,
+                        v.Tracks
+                            .OrderBy(t => t.Id)
+                            .Select(t => t.TrackName)
+                            .ToList()))
+                    .ToList()
                 );
         }
 

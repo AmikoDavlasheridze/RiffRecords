@@ -7,6 +7,7 @@ namespace RiffRecords.Application.Abstractions
     public interface IBandRepository
     {
         Task<Band?> GetBandByIdAsync(int id);
+        Task<Band?> GetBandWithDetailsAsync(int id);
         Task<bool> SlugExistsAsync(string slug, int? excludeBandId = null);
         Task<List<Band>> GetAllBandsAsync();
         Task AddAsync(Band band);

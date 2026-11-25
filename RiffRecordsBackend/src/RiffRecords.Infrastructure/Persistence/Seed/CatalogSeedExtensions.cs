@@ -42,7 +42,15 @@ namespace RiffRecords.Infrastructure.Persistence.Seed
                     band.Achievements.Add(new Achievement { Description = achievement });
 
                 foreach (var v in item.Vinyls)
-                    band.Vinyls.Add(new Vinyl(v.AlbumTitle, v.Price, v.ReleaseYear, v.Image, 0, v.Stock));
+                {
+                    var vinyl = new Vinyl(v.AlbumTitle, v.Price, v.ReleaseYear, v.Image, 0, v.Stock);
+
+                    // A track's year is its album's release year.
+                    foreach (var trackName in v.Tracks ?? [])
+                        vinyl.Tracks.Add(new Track { TrackName = trackName, Year = v.ReleaseYear });
+
+                    band.Vinyls.Add(vinyl);
+                }
 
                 db.Bands.Add(band);
                 added++;
@@ -71,6 +79,7 @@ namespace RiffRecords.Infrastructure.Persistence.Seed
             decimal Price,
             int ReleaseYear,
             string Image,
-            int Stock);
+            int Stock,
+            List<string>? Tracks);
     }
 }

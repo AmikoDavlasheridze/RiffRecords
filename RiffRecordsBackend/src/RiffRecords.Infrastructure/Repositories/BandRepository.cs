@@ -40,6 +40,19 @@ namespace RiffRecords.Infrastructure.Repositories
                 .FirstOrDefaultAsync(b => b.BandId == id);
         }
 
+        // Read-only: bio, achievements, vinyls and their tracks, one query per collection.
+        public async Task<Band?> GetBandWithDetailsAsync(int id)
+        {
+            return await _context.Bands
+                .AsNoTracking()
+                .AsSplitQuery()
+                .Include(b => b.Bio)
+                .Include(b => b.Achievements)
+                .Include(b => b.Vinyls)
+                    .ThenInclude(v => v.Tracks)
+                .FirstOrDefaultAsync(b => b.BandId == id);
+        }
+
         public Task<bool> SlugExistsAsync(string slug, int? excludeBandId = null) =>
             _context.Bands.AnyAsync(b => b.Slug == slug && b.BandId != excludeBandId);
         
