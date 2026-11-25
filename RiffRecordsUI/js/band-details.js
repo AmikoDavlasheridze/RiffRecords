@@ -174,6 +174,7 @@ function showAlbumDetails(band, v, card) {
 
   const section = document.getElementById("albumDetails");
   section.replaceChildren();
+  const tracks = v.tracks ?? [];
 
   const layout = el("div", "container album-layout");
 
@@ -197,7 +198,7 @@ function showAlbumDetails(band, v, card) {
   addMeta("Label", v.label ?? "—");
   addMeta("Released", v.releaseYear);
   addMeta("Runtime", formatDuration(v.runtimeSeconds));
-  addMeta("Tracks", v.tracks.length);
+  addMeta("Tracks", tracks.length);
 
   info.appendChild(head);
   info.appendChild(meta);
@@ -206,10 +207,10 @@ function showAlbumDetails(band, v, card) {
     info.appendChild(el("p", "album-description", v.description));
   }
 
-  if (v.tracks.length > 0) {
+  if (tracks.length > 0) {
     info.appendChild(el("h3", "tracklist-title", "Tracklist"));
     const list = el("ol", "tracklist");
-    v.tracks.forEach((t) => {
+    tracks.forEach((t) => {
       const li = el("li", t.isFamous ? "is-famous" : null);
       li.appendChild(el("span", "track-no", String(t.trackNumber).padStart(2, "0")));
       const name = el("span", "track-name", t.name);
