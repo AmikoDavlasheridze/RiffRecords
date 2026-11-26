@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RiffRecords.Domain.Entities.Band;
+using RiffRecords.Domain.Entities.Order;
 using RiffRecords.Domain.Entities.User;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace RiffRecords.Infrastructure.Persistence
         public DbSet<Vinyl> Vinyls => Set<Vinyl>();
         public DbSet<User> Users => Set<User>();
         public DbSet<WishlistedItem> WishlistedItems => Set<WishlistedItem>();
+        public DbSet<Order> Orders => Set<Order>();
+        public DbSet<OrderItem> OrderItems => Set<OrderItem>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

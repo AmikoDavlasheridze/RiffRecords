@@ -16,6 +16,7 @@ namespace RiffRecords.Infrastructure.Persistence.Configurations
             builder.Property(v => v.Price).HasPrecision(10, 2);
             builder.Property(b => b.AlbumTitle).IsRequired().HasMaxLength(200);
             builder.Property(b => b.Image).IsRequired();
+            builder.Property(v => v.RowVersion).IsRowVersion();
 
             builder.HasMany(v => v.Tracks)
                 .WithOne(t => t.Vinyl)
